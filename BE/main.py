@@ -72,7 +72,7 @@ def create_anxiety_table():
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS student_anxiety_prediction (
                     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-                    user_id UUID NOT NULL REFERENCES users(id),
+                    user_id UUID NOT NULL REFERENCES users_list(id)
                     GADE TEXT,
                     SWL INTEGER,
                     Game TEXT,
